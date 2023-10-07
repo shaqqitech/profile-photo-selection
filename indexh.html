@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h2>Upload Photo</h2>
+      <img src="" alt="" />
+      <input type="file" name="file" id="inputFile" />
+      <label for="inputFile">Selet File</label>
+    </main>
+
+    <script>
+      const image = document.querySelector("img");
+      const input = document.querySelector("input");
+
+      input.addEventListener("change", (e) => {
+        image.src = URL.createObjectURL(e.target.files[0]);
+      });
+    </script>
+  </body>
+</html>
